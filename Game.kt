@@ -15,9 +15,20 @@ fun main() {
 
     val healthStatus = fotmatHealthStatus(healthPoints, isBlessed)
 
-    val statusFormatString ="(健康指數: $healthPoints)(光環: $auraColor)(運勢: ${if (isBlessed)  "走運" else "很背"}) -> $name $healthStatus"
-    println(statusFormatString)
+    printPlayerStatus(healthPoints, auraColor, isBlessed, name, healthStatus)
 
+}
+
+private fun printPlayerStatus(
+    healthPoints: Int,
+    auraColor: String,
+    isBlessed: Boolean,
+    name: String,
+    healthStatus: String
+) {
+    val statusFormatString =
+        "(健康指數: $healthPoints)(光環: $auraColor)(運勢: ${if (isBlessed) "走運" else "很背"}) -> $name $healthStatus"
+    println(statusFormatString)
 }
 
 private fun auraColor(

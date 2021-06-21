@@ -3,19 +3,19 @@
 import java.lang.Math.pow
 import java.lang.Math.random
 
+const val MAX_EXPERIENCE: Int =5000
 fun main() {
     val name = "Madrigal"
     val healthPoints = 76
     var isBlessed = true
     val isImmortal = false
     val karma = (pow(random(),(110-healthPoints)/100.0)*20).toInt()
-    //Aura
 
     val auraColor = auraColor(isBlessed, healthPoints, isImmortal, karma)
-
     val healthStatus = fotmatHealthStatus(healthPoints, isBlessed)
 
     printPlayerStatus(healthPoints, auraColor, isBlessed, name, healthStatus)
+    castFireball()
 
 }
 
@@ -67,4 +67,7 @@ private fun fotmatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
         else -> "情況不妙"
     }
     return healthStatus
+}
+private fun castFireball(){
+    println("火球突然出現")
 }

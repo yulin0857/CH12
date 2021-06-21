@@ -15,8 +15,8 @@ fun main() {
     val healthStatus = fotmatHealthStatus(healthPoints, isBlessed)
 
     printPlayerStatus(healthPoints, auraColor, isBlessed, name, healthStatus)
-    castFireball()
 
+    castFireball(5)
 }
 
 private fun printPlayerStatus(
@@ -68,6 +68,6 @@ private fun fotmatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
     }
     return healthStatus
 }
-private fun castFireball(){
-    println("火球突然出現")
+private fun castFireball(numFireball: Int){
+    println("火球突然出現.($numFireball)")
 }

@@ -69,5 +69,5 @@ private fun fotmatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
     return healthStatus
 }
 private fun castFireball(numFireball: Int){
-    println("火球突然出現.($numFireball)")
+    println("一杯castFireball應運而生.(x$numFireball)")
 }

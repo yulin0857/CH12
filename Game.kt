@@ -16,7 +16,7 @@ fun main() {
 
     printPlayerStatus(healthPoints, auraColor, isBlessed, name, healthStatus)
 
-    castFireball(5)
+    castFireball()
 }
 
 private fun printPlayerStatus(
@@ -68,6 +68,7 @@ private fun fotmatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
     }
     return healthStatus
 }
-private fun castFireball(numFireball: Int){
+private fun castFireball(numFireball: Int = 2) =
+
     println("一杯castFireball應運而生.(x$numFireball)")
-}
+

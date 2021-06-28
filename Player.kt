@@ -1,5 +1,12 @@
+import java.util.*
+
 class Player {
-    val name = "madrigal"
+    var name = "madrigal"
+        get() = field.capitalize()
+        //get() = field.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
+        private set(value){
+            field  value.trim()
+        }
 
 
     fun castFireball(numFireballs: Int=2)=

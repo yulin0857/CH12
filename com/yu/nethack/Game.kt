@@ -14,13 +14,11 @@ fun main() {
     player.castFireball(5)
 
     //aura
-    val auraColor = player.auraColor()
+    //val auraColor = player.auraColor()
+    player.auraColor()
 
     //Player status
     printPlayerStatus(player)
-
-    //aura
-    player.auraColor()
 }
 
 private fun printPlayerStatus(player: Player)

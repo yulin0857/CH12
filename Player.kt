@@ -5,8 +5,11 @@ class Player {
         get() = field.capitalize()
         //get() = field.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
         private set(value){
-            field  value.trim()
+            field = value.trim()
         }
+    val healthPoints = 89
+    var isBlessed = true
+    val isImmortal = false
 
 
     fun castFireball(numFireballs: Int=2)=

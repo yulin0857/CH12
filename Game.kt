@@ -6,12 +6,12 @@ import java.lang.Math.random
 const val MAX_EXPERIENCE: Int =5000
 fun main() {
     //val name = "Madrigal"
-    val healthPoints = 89
-    var isBlessed = true
-    val isImmortal = false
+    //val healthPoints = 89
+    //var isBlessed = true
+    //val isImmortal = false
 
     val player=Player()
-    player.castFireball()
+    player.castFireball(5)
 
     val karma = (pow(random(),(110-healthPoints)/100.0)*20).toInt()
 

@@ -8,17 +8,21 @@ fun main() {
     val name = "Madrigal"
     val healthPoints = 76
     var isBlessed = true
-
     val isImmortal = false
+
+    val player=Player()
+    player.castFireball()
+
     val karma = (pow(random(),(110-healthPoints)/100.0)*20).toInt()
 
+    //aura
     val auraColor = auraColor(isBlessed, healthPoints, isImmortal, karma)
-    val healthStatus = fotmatHealthStatus(healthPoints, isBlessed)
 
+    val healthStatus = fotmatHealthStatus(healthPoints, isBlessed)
     printPlayerStatus(healthPoints, auraColor, isBlessed, name, healthStatus)
 
     val glass = castFireball(60)
-    drink(glass)
+
 }
 
 private fun printPlayerStatus(
@@ -75,16 +79,16 @@ private fun castFireball(numFireball: Int = 2): Int{
     return numFireball
 }
 
-    private fun drink(glass: Int){
-        val drunkenness = when(glass){
-            0 -> "清醒"
-            in 1..10 -> "微醺"
-            in 11..20 -> "微醉"
-            in 21..30 -> "醉了"
-            in 31..40 -> "大醉"
-            in 41..50 -> "爛醉如泥"
-            else ->"沒意識"
-        }
-        println("酒醉狀態:$drunkenness")
+/*private fun drink(glass: Int){
+    val drunkenness = when(glass){
+        0 -> "清醒"
+        in 1..10 -> "微醺"
+        in 11..20 -> "微醉"
+        in 21..30 -> "醉了"
+        in 31..40 -> "大醉"
+        in 41..50 -> "爛醉如泥"
+        else ->"沒意識"
     }
+    println("酒醉狀態:$drunkenness")
+}*/
 

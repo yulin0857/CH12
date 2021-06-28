@@ -5,8 +5,8 @@ import java.lang.Math.random
 
 const val MAX_EXPERIENCE: Int =5000
 fun main() {
-    val name = "Madrigal"
-    val healthPoints = 76
+    //val name = "Madrigal"
+    val healthPoints = 89
     var isBlessed = true
     val isImmortal = false
 
@@ -19,9 +19,9 @@ fun main() {
     val auraColor = auraColor(isBlessed, healthPoints, isImmortal, karma)
 
     val healthStatus = fotmatHealthStatus(healthPoints, isBlessed)
-    printPlayerStatus(healthPoints, auraColor, isBlessed, name, healthStatus)
+    printPlayerStatus(healthPoints, auraColor, isBlessed, player.name, healthStatus)
 
-    val glass = castFireball(60)
+
 
 }
 
@@ -74,10 +74,10 @@ private fun fotmatHealthStatus(healthPoints: Int, isBlessed: Boolean): String {
     }
     return healthStatus
 }
-private fun castFireball(numFireball: Int = 2): Int{
+/*private fun castFireball(numFireball: Int = 2): Int{
     println("已喝下$numFireball 杯Fireball")
     return numFireball
-}
+}*/
 
 /*private fun drink(glass: Int){
     val drunkenness = when(glass){
